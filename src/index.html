@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Entrevistador Oxxo</title>
+
+  <link href="./css/styles.css" rel="stylesheet" />
+
+  <script src="https://aka.ms/csspeech/jsbrowserpackageraw"></script>
+  <script src="./js/main.js"></script>
+
+  <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+  <div class="header">
+    <img src="images/oxxologo.png" alt="Logo" width="80" height="32" />
+    <span class="header__title">Oxxo - Luisa entrevistadora virtual</span>
+
+  </div>
+
+  <div class="title">
+    <h1>Descubre tu potencial con entrevistas virtuales</h1>
+  </div>
+
+  <div class="main">
+    <div class="main-block">
+      <h2>Aquí tienes ejemplos de preguntas que le puedes hacer al avatar</h2>
+
+      <div class="suggested-questions">
+        <button onclick="window.speak(`¿Qué tipo de preguntas me harán?`)">
+          ¿Qué tipo de preguntas me harán?
+        </button>
+
+        <button onclick="window.speak(`¿Qué sucede después de la entrevista?`)">
+          ¿Qué sucede después de la entrevista?
+        </button>
+
+        <button onclick="window.speak(`¿Cuándo recibiré respuesta tras la entrevista?`)">
+          ¿Cuándo recibiré respuesta tras la entrevista?
+        </button>
+
+        <button onclick="window.speak(`¿Puedo hacer una simulación de la entrevista?`)">
+          ¿Puedo hacer una simulación de la entrevista?
+        </button>
+      </div>
+    </div>
+
+    <div class="avatar-block">
+      <div id="remoteVideo">
+      </div>
+      <canvas id="canvas" width="720" height="1080" style="background-color: transparent;" hidden="hidden"></canvas>
+      <canvas id="tmpCanvas" width="720" height="1080" hidden="hidden"></canvas>
+      
+      <fluent-card class="record-card">
+        <div class="outerbutton">
+          <button id="startRecording" onclick="window.startRecording()" class="round-button">
+            <i id="buttonIcon" class="fas fa-microphone"></i>
+          </button>
+        </div>
+
+        <label id="spokenText" for="spokenText">
+          Presiona el mic para hablar
+        </label>
+      </fluent-card>
+    </div>
+
+    <div class="main-block">
+      <ul id="chathistory" class="chat-history"></ul>
+    </div>
+  </div>
+
+  <div id="loginOverlay">
+    <div id="gradientOverlay">
+      <div class="loginCard">
+        <div class="loginCard__header">Login</div>
+
+        <fluent-text-field appearance="outline" placeholder="user@email.com">Username</fluent-text-field>
+        <fluent-text-field appearance="outline" placeholder="****************">Password</fluent-text-field>
+
+        <button id="playVideo" onclick="window.startSession()">
+          <span id="playVideo__text" class="playVideo__text">Login</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
