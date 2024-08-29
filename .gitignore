@@ -1,3 +1,6 @@
 # All local.settings
 local.settings.json
 api/local.settings.json
+
+# all cpython files
+*.cpython-39.pyc
