@@ -21,7 +21,7 @@ Sin experiencia laboral previa (nosotros te capacitamos)
 • Cobro en caja.
 
 * Prestaciones:
-Sueldo semanal cada viernes ($1,800 más bonos)
+Sueldo semanal cada viernes ($1,500 más bonos)
 Vales de despensa ($160),
 Pago de semana adelantada
 Caja de Ahorro
