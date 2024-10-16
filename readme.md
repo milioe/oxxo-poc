@@ -92,3 +92,4 @@ This solution accelerator can be used to deploy an application that offers an in
 # oxxo-poc
 # oxxo-poc
 # oxxo-poc
+# RHMobiik

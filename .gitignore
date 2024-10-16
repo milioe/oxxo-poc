@@ -4,3 +4,6 @@ api/local.settings.json
 
 # all cpython files
 *.cpython-39.pyc
+
+# ignore all .DS_Store files in any directory
+**/.DS_Store
